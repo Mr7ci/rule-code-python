@@ -5,7 +5,7 @@ import fileinput as fileinput
 def changeRuleAction(ssid,action):
     #check ssid and action correct form ? or 
     #path for pi = '/etc/snort/rules/local.rules'
-    with fileinput.FileInput('test.rules', inplace=True, backup='.bak') as file:
+    with fileinput.FileInput('/etc/snort/rules/test.rules', inplace=True, backup='.bak') as file:
         for num,line in enumerate(file,1):
            if ssid in line:
                 if 'drop' in line:

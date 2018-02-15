@@ -4,7 +4,7 @@ import sys
 import fileinput as fileinput
 
 def userule(ssid):
-    with fileinput.FileInput('test.rules', inplace=True, backup='.bak') as file:
+    with fileinput.FileInput('/etc/snort/rules/test.rules', inplace=True, backup='.bak') as file:
         for num,line in enumerate(file,1):
            if ssid in line:
                if '#' in line :
