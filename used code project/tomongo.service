@@ -1,0 +1,10 @@
+[Unit]
+Description=Send data to MongoDB
+After=syslog.target network.target clearDB.service snort.service 
+ 
+[Service]
+Type=simple
+ExecStart=/usr/bin/python /home/snortprac/testcsvno.py
+ 
+[Install]
+WantedBy=multi-user.target
